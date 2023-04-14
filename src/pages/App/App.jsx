@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import ShopPage from '../ShopPage/ShopPage';
 import CartPage from '../CartPage/CartPage';
+import DetailPage from '../DetailPage/DetailPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -21,6 +23,8 @@ export default function App() {
               <Route path="/orders/cart" element={<CartPage user={user} setUser={setUser}/>} />
               <Route path="/orders" element={<OrderHistoryPage />} />
               <Route path="/shop" element={<ShopPage />} />
+              <Route path="/items/:itemsId" element={<DetailPage  user={user} />} />
+              <Route path="/*" element={<Navigate to="/shop" />} />
             </Routes>
           </>
           :

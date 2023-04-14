@@ -80,7 +80,7 @@ const lineItemSchema = new Schema({
     const lineItem = cart.lineItems.find(lineItem => lineItem.item._id.equals(itemId));
     if (lineItem && newQty <= 0) {
       // Calling deleteOne, removes the lineItem subdoc from the cart.lineItems array
-      lineItem.deleteOne();
+      lineItem.remove();
     } else if (lineItem) {
       // Set the new qty - positive value is assured thanks to prev if
       lineItem.qty = newQty;
