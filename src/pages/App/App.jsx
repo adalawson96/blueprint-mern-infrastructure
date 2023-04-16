@@ -4,6 +4,7 @@ import { getUser } from '../../utilities/users-service';
 import './App.css';
 import AuthPage from '../AuthPage/AuthPage';
 import ShopPage from '../ShopPage/ShopPage';
+import HomePage from '../HomePage/HomePage';
 import CartPage from '../CartPage/CartPage';
 import DetailPage from '../DetailPage/DetailPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
@@ -24,6 +25,7 @@ export default function App() {
               <Route path="/orders/cart" element={<CartPage user={user} setUser={setUser}/>} />
               <Route path="/orders" element={<OrderHistoryPage />} />
               <Route path="/shop" element={<ShopPage />} />
+              <Route path="/home" element={<HomePage />} />
               <Route path="/items/:itemsId" element={<DetailPage user={user} />} />
               <Route path="/items/reviews/:id" element={<EditReview user={user} />} />
               
