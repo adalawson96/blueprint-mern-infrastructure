@@ -1,7 +1,16 @@
 import * as reviewsAPI from './reviews-api';
 
-export async function getAllReviews() {
-    const allReviews = await reviewsAPI.getReveiwsRequest()
+export async function deleteOneReview(id) {
+    const deletedReview = await reviewsAPI.deleteReviewsRequest(id)
+    return deletedReview
+}
+export async function updateReview(id, reviewData) {
+    const updatedReview = await reviewsAPI.updateReviewsRequest(id, reviewData)
+    return updatedReview
+}
+
+export async function getAllReviews(id) {
+    const allReviews = await reviewsAPI.getReviewsRequest(id)
     return allReviews
 }
 

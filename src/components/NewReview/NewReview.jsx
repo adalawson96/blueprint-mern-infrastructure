@@ -1,21 +1,21 @@
 import{ useState } from 'react';
 import * as reviewsMaker from '../../utilities/reviews-maker';
 
-export default function NewReviewPage({product, user}){
+export default function NewReviewPage({ product }){
     const [review, setReview] = useState({
         text:'',
-        user: user._id,
         product: product._id
     })
 
     function handleChange(evt) {
-        // setReview({...review.target.name : evt.target.value})
+        setReview({...review, [evt.target.name] : evt.target.value})
     }
 
     async function handleSubmit(evt) {
         evt.preventDefault();
         const createdReview = await reviewsMaker.createdReview(review);
         setReview('');
+        console.log(createdReview)
     }
 
     return(

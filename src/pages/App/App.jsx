@@ -8,6 +8,7 @@ import CartPage from '../CartPage/CartPage';
 import DetailPage from '../DetailPage/DetailPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
+import EditReview from '../../components/EditReview/EditReview';
 
 
 export default function App() {
@@ -23,7 +24,9 @@ export default function App() {
               <Route path="/orders/cart" element={<CartPage user={user} setUser={setUser}/>} />
               <Route path="/orders" element={<OrderHistoryPage />} />
               <Route path="/shop" element={<ShopPage />} />
-              <Route path="/items/:itemsId" element={<DetailPage  user={user} />} />
+              <Route path="/items/:itemsId" element={<DetailPage user={user} />} />
+              <Route path="/items/reviews/:id" element={<EditReview user={user} />} />
+              
               <Route path="/*" element={<Navigate to="/shop" />} />
             </Routes>
           </>

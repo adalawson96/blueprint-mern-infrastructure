@@ -2,7 +2,9 @@ const Review = require ('../../models/review');
 
 module.exports = {
     create,
-    index
+    index,
+    update,
+    deleteOne
 };
 
 async function create(req, res) {
@@ -20,7 +22,8 @@ async function create(req, res) {
 
 async function index(req, res) {
     try{
-        const allReviews = await Review.find({});
+        console.log(req.params.id)
+        const allReviews = await Review.find({product: req.params.id});
         console.log(allReviews)
 
         res.json(allReviews)
@@ -28,3 +31,26 @@ async function index(req, res) {
         res.status(400).json(err);
     }
 }
+
+async function update(req, res){
+    try{
+        console.log(req.params.id)
+        const allReviews = await Review.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        console.log(allReviews)
+
+        res.json(allReviews)
+    }catch (err) {
+        res.status(400).json(err);
+    }
+}
+
+async function deleteOne(req, res){
+    try{
+        console.log(req.params.id)
+        const deletedReview = await Review.findByIdAndDelete(req.params.id);
+   
+    }catch (err) {
+        res.status(400).json(err);
+    }
+}
+
