@@ -13,6 +13,7 @@ export default function NewReviewPage({ product }){
 
     async function handleSubmit(evt) {
         evt.preventDefault();
+        console.log(review, 'REVIEW')
         const createdReview = await reviewsMaker.createdReview(review);
         setReview('');
         console.log(createdReview)

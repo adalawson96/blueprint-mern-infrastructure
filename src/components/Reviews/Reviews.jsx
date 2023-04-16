@@ -35,6 +35,6 @@ export default function Reviews({ product }) {
         :
         <h3>No reviews Yet</h3> 
         }
-    </>
+        </>
     );
 }

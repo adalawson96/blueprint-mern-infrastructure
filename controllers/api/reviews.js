@@ -8,9 +8,10 @@ module.exports = {
 };
 
 async function create(req, res) {
+    console.log('testing')
     try {
         req.body.user = req.user._id
-
+        console.log(req.body, 'REQ')
         const createdReview = await Review.create(req.body);
         console.log(createdReview);
 

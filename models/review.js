@@ -7,7 +7,7 @@ const reviewSchema = new Schema({
     ref: "User",
 required:true
 },
-products: { type: mongoose.Schema.Types.ObjectId, 
+product: { type: mongoose.Schema.Types.ObjectId, 
     ref: "Product",
     required:true
 }

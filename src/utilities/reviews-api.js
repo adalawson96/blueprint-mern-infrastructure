@@ -14,5 +14,6 @@ export async function getReviewsRequest(id) {
 }
 
 export async function createReviewRequest(reviewData){
+    console.log(BASE_URL, 'BASE')
     return sendRequest(BASE_URL, 'POST', reviewData);
 }

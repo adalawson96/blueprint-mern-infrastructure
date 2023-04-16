@@ -7,7 +7,7 @@ export default function ProductDetailPage({user}) {
     let product = location.state;
     return(
         <>
-            <img classNmae='image' src={product.image} alt=""/>
+            <img className='image' src={product.image} alt=""/>
             <h3>{product.name}</h3>
             <h3>{product.price}</h3>
             <h3>{product.detail}</h3>
