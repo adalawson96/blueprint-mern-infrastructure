@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import * as reviewsMaker from '../../utilities/reviews-maker';
 import { useParams } from 'react-router-dom';
 
-export default function EditReview(){
+export default function EditReview({ user }){
+    const [reviewOwner, setReviewOwner] = useState('')
     const [formData, setFormData] = useState({
         text: '',
     });
@@ -18,6 +19,17 @@ export default function EditReview(){
         setFormData('');
     }
 
+    useEffect(function() {
+        async function getReview(){
+            const review = await reviewsMaker.findOneReview(id)
+            setReviewOwner(review[0].user)
+            console.log(user)
+        }
+        getReview();
+    }, []);
+
+    let disable = reviewOwner  === user._id ? false : true
+
     return(
         <>
         <h1>Edit Review</h1>
@@ -25,7 +37,7 @@ export default function EditReview(){
                 <label htmlFor="">Text:
                     <input type="text" name="text" id="text" onChange={handleChange} value={ formData.text } />
                 </label>
-                <input type="submit" value="Add Review" />
+                <input type="submit" value="Edit Review" disabled={disable} />
             </form>
         </>
     )

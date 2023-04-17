@@ -17,3 +17,6 @@ export async function createReviewRequest(reviewData){
     console.log(BASE_URL, 'BASE')
     return sendRequest(BASE_URL, 'POST', reviewData);
 }
+export async function findReviewRequest(id){
+    return sendRequest(`${BASE_URL}/findone${id}`);
+}

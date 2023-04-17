@@ -16,7 +16,8 @@ export default function ProductDetailPage({user}) {
             product={product}
             user={user} />
             <Reviews
-            product={product} />
+            product={product} 
+            user={user}/>
         </>
     )
 }

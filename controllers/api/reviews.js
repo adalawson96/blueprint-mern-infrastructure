@@ -4,7 +4,8 @@ module.exports = {
     create,
     index,
     update,
-    deleteOne
+    deleteOne,
+    findOne
 };
 
 async function create(req, res) {
@@ -35,8 +36,10 @@ async function index(req, res) {
 
 async function update(req, res){
     try{
-        console.log(req.params.id)
-        const allReviews = await Review.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        // const foundReview = await Review.find({ user: req.user._id, id:req.params.id })
+        // if (req.body._id )
+        console.log(req.user._id)
+        const allReviews = await Review.findByIdAndUpdate({ user: req.user._id, _id:req.params.id }, req.body, {new: true});
         console.log(allReviews)
 
         res.json(allReviews)
@@ -50,6 +53,16 @@ async function deleteOne(req, res){
         console.log(req.params.id)
         const deletedReview = await Review.findByIdAndDelete(req.params.id);
    
+    }catch (err) {
+        res.status(400).json(err);
+    }
+}
+
+async function findOne(req, res) {
+    try{
+        const foundReviews = await Review.find({_id:req.params.id});
+
+        res.json(foundReviews)
     }catch (err) {
         res.status(400).json(err);
     }
