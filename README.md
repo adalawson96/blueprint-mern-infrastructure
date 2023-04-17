@@ -1,6 +1,6 @@
 Case Coffee is an online shop to buy coffe. This app allows you to make checkouts and reviews of the products. 
 
-Click <a href="url">HERE</a> to deploy app
+Click <a href="https://casecoffee.herokuapp.com/">HERE</a> to deploy app
 
 <h1>User Profile</h1>
 The user wants:
@@ -10,9 +10,11 @@ The user wants:
 
 <h1>Screenshot</h1>
 
+<img src="https://i.imgur.com/qtL3fon.png" alt="project">
+
 <h1>Technologies Used</h1>
 
-- Application: Node.js, ExpressEJS, CSS, HTML, JavaScript, MongoDB/Mongoose
+- Application: Node.js, ExpressEJS, CSS, HTML, JavaScript, MongoDB/Mongoose, React
 
 - OAuth Authentication
 
@@ -30,6 +32,7 @@ The user wants:
 - Create a search bar
 - CSS
 - Implement stripe
+- Render all pages
 
 
 
