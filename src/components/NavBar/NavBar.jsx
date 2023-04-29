@@ -9,8 +9,8 @@ export default function NavBar({ user, setUser }) {
 
   return (
     <nav>
-      <Link to="/home">Case Coffee</Link>
-      &nbsp; | &nbsp;
+      <Link to="/home">{ <img src="https://i.imgur.com/FM8b9Om.png" alt="Logo" />}</Link>
+      <br/>
       <Link to="/shop">Shop</Link>
       &nbsp; | &nbsp;
       <Link to="/orders">Order History</Link>

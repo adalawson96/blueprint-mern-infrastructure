@@ -12,6 +12,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import EditReview from '../../components/EditReview/EditReview';
 
 
+
 export default function App() {
   const [user, setUser] = useState(getUser());
 

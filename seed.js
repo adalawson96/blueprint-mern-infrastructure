@@ -11,11 +11,12 @@ const Item = require('./models/item');
         {name: 'Blends', sortOrder: 20},
         {name: 'Instant Coffee', sortOrder: 30},
         {name: 'Merchandise', sortOrder: 40},
+        {name: 'All Coffee', sortOrder: 50},
     ]);
 
 await Item.deleteMany({});
 const items = await Item.create([ 
-    {name: 'Ethiopia Worka Sakaro', image: 'https://i.imgur.com/a2zi24Z.png', category: categories[0], price: 20.00, detail: 'The Worka Sakaro delivers the top-notch qualities we look for in an Ethiopian coffee: juiciness, a crisp acidity and some lovely floral tones. The cup is filled with notes of ripe raspberries and vanilla cream soda.'}, 
+    {name: 'Ethiopia Worka Sakaro', image: 'https://i.imgur.com/a2zi24Z.png', category: [categories[0], categories[4]], price: 20.00, detail: 'The Worka Sakaro delivers the top-notch qualities we look for in an Ethiopian coffee: juiciness, a crisp acidity and some lovely floral tones. The cup is filled with notes of ripe raspberries and vanilla cream soda.'}, 
     {name: 'Columbia Juan Francisco', image: 'https://i.imgur.com/qP6tTfu.png', category: categories[0], price: 20.00, detail: 'This micro-lot, from the farm of producer Juan Francisco, is rich and tropical. The cup features notes of fruit salad, strawberries and agave, with a balanced body and juicy acidity.'}, 
     {name: 'Colombia La Joya Natural', image: 'https://i.imgur.com/LSY666x.png', category: categories[0], price: 21.00, detail: 'This year we decided to bring in the natural processed lot from La Joya, due to its intense, sweet and unique flavor profile. The cup reminds us of both bananas foster and a caramel covered apple, complete with burnt sugar notes and a hint of rum sauce. This coffee is perfect for those looking for something a bit out of the ordinary.'}, 
     {name: 'Honduras Jose Perez', image: 'https://i.imgur.com/nECnJNz.png', category: categories[0], price: 20.00, detail: 'This single-producer lot has a pleasing nuttiness that pairs perfectly with sweet notes of apple pie and dried fruit. The body is well-rounded, with a rich, creamy finish.'}, 

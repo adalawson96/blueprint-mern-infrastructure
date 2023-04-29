@@ -12,9 +12,9 @@ async function create(req, res) {
     console.log('testing')
     try {
         req.body.user = req.user._id
-        console.log(req.body, 'REQ')
+        // console.log(req.body, 'REQ')
         const createdReview = await Review.create(req.body);
-        console.log(createdReview);
+        // console.log(createdReview);
 
         res.json(createdReview)
     }catch (err) {
@@ -36,8 +36,6 @@ async function index(req, res) {
 
 async function update(req, res){
     try{
-        // const foundReview = await Review.find({ user: req.user._id, id:req.params.id })
-        // if (req.body._id )
         console.log(req.user._id)
         const allReviews = await Review.findByIdAndUpdate({ user: req.user._id, _id:req.params.id }, req.body, {new: true});
         console.log(allReviews)
