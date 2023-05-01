@@ -23,7 +23,7 @@ export default function ShopPage({ user, setUser }) {
       const items = await itemsAPI.getAll();
       categoriesRef.current = [...new Set(items.map(item => item.category.name))];
       setProductItems(items);
-      console.log(productItems, 'GRAIN')
+      // console.log(productItems, 'GRAIN')
       setActiveCat(categoriesRef.current[0]);
     }
     getItems();
