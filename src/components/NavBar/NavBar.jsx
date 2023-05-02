@@ -36,11 +36,16 @@ export default function NavBar({ user, setUser }) {
           <Link to="/shop">Shop</Link>
           </button>
           <ul class="dropdown-menu">
-            {/* <li><a class="dropdown-item" href="#">ALL COFFEE</a></li> */}
+            <Link to="/shop/allCoffee">All Coffee</Link>
+            <Link to="/shop/allCoffee">Single Origin</Link>
+            <Link to="/shop/allCoffee">Blends</Link>
+            <Link to="/shop/allCoffee">Instant Coffee</Link>
+            <Link to="/shop/allCoffee">Merhcandise</Link>
+            {/* <li><a class="dropdown-item" href="#">ALL COFFEE</a></li>
             <li><a class="dropdown-item" href="#">SINGLE ORIGIN</a></li>
             <li><a class="dropdown-item" href="#">BLENDS</a></li>
             <li><a class="dropdown-item" href="#">INSTANT COFFEE</a></li>
-            <li><a class="dropdown-item" href="#">MERCHANDISE</a></li>
+            <li><a class="dropdown-item" href="#">MERCHANDISE</a></li> */}
           </ul>
         </div>
 
@@ -52,12 +57,11 @@ export default function NavBar({ user, setUser }) {
             <span class="visually-hidden"></span>
           </button>
           <ul class="dropdown-menu">
-
-            <li><a class="dropdown-item" href="#">AEROPRESS</a></li>
+            {/* <li><a class="dropdown-item" href="#">AEROPRESS</a></li>
             <li><a class="dropdown-item" href="#">CHEMEX</a></li>
             <li><a class="dropdown-item" href="#">FELLOW STAGG</a></li>
             <li><a class="dropdown-item" href="#">FRENCH PRESS</a></li>
-            <li><a class="dropdown-item" href="#">MERCHANDISE</a></li>
+            <li><a class="dropdown-item" href="#">MERCHANDISE</a></li> */}
           </ul>
         </div>
 
@@ -81,8 +85,8 @@ export default function NavBar({ user, setUser }) {
             <span class="visually-hidden"></span>
           </button>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">ABOUT US</a></li>
-            <li><a class="dropdown-item" href="#">SOURCING</a></li>
+            {/* <li><a class="dropdown-item" href="#">ABOUT US</a></li>
+            <li><a class="dropdown-item" href="#">SOURCING</a></li> */}
           </ul>
         </div>
       </body>

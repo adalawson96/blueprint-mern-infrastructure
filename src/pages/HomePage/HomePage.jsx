@@ -11,9 +11,10 @@ export default function HomePage(){
         <img src="https://i.imgur.com/vTO91mL.png" alt="wholesale"/>
         <br/>
         <h3> New Arrivals </h3>
-        <footer>
-            
-        </footer>
+        <img src="https://i.imgur.com/4r5MY9t.png" alt="juan francisco"/>
+        <img src="https://i.imgur.com/jsKyRhU.png" alt="worka sakaro"/>
+        <img src="https://i.imgur.com/nBvPjev.png" alt="karatu"/>
+        <img src="https://i.imgur.com/RTbaJsB.png" alt="carlos madrid"/>
         </>
     )
 }

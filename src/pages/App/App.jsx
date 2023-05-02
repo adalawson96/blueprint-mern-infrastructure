@@ -10,7 +10,7 @@ import DetailPage from '../DetailPage/DetailPage';
 import OrderHistoryPage from '../OrderHistoryPage/OrderHistoryPage';
 import NavBar from '../../components/NavBar/NavBar';
 import EditReview from '../../components/EditReview/EditReview';
-
+import Footer from "../../components/Footer/Footer";
 
 
 export default function App() {
@@ -29,13 +29,16 @@ export default function App() {
               <Route path="/home" element={<HomePage />} />
               <Route path="/items/:itemsId" element={<DetailPage user={user} />} />
               <Route path="/items/reviews/:id" element={<EditReview user={user} />} />
-              
               <Route path="/*" element={<Navigate to="/shop" />} />
             </Routes>
+            <div>
+              <Footer />
+            </div>
           </>
           :
           <AuthPage setUser={setUser} />
-      }
+        }
+        {/* <Footer /> */}
     </main>
   );
 }
