@@ -36,10 +36,10 @@ export default function NavBar({ user, setUser }) {
           <Link to="/shop">Shop</Link>
           </button>
           <ul class="dropdown-menu">
-            <Link to="/shop/allCoffee">All Coffee</Link>
-            <Link to="/shop/allCoffee">Single Origin</Link>
-            <Link to="/shop/allCoffee">Blends</Link>
-            <Link to="/shop/allCoffee">Instant Coffee</Link>
+            <Link to="/shop/allCoffee">All Coffee</Link><br/>
+            <Link to="/shop/allCoffee">Single Origin</Link><br/>
+            <Link to="/shop/allCoffee">Blends</Link><br/>
+            <Link to="/shop/allCoffee">Instant Coffee</Link><br/>
             <Link to="/shop/allCoffee">Merhcandise</Link>
             {/* <li><a class="dropdown-item" href="#">ALL COFFEE</a></li>
             <li><a class="dropdown-item" href="#">SINGLE ORIGIN</a></li>
