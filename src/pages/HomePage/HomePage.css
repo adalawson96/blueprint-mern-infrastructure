@@ -1,0 +1,87 @@
+.main-pic img {
+    height: auto;
+    width: stretch;
+}
+
+.main-pic h3{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 8%;
+    font-weight: 300;
+    color: rgb(186, 162, 67);
+}
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.new-merch {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    /* padding-right: ; */
+}
+
+.new-merch h3{
+    display: flex;
+    justify-content: center;
+    color: rgb(186, 162, 67);
+    text-decoration: none;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+.subscriptions {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding-right: 10px;
+}
+
+.subscriptions h3{
+    display: flex;
+    justify-content: center;
+    color: rgb(186, 162, 67);
+    text-decoration: none;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+.wholesale {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    padding-right: 10px;
+}
+
+.wholesale h3{
+    display: flex;
+    justify-content: center;
+    color: rgb(186, 162, 67);
+    text-decoration: none;
+    font-weight: 300;
+    padding-top: 25px;
+}
+
+.new-arrivals h3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10%;
+    font-weight: 300;
+    color: black;
+}
+
+.new-arrivals-img {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    height: 230px;
+    width: 230px;
+}

@@ -1,0 +1,48 @@
+/* .navbar-sticky-top {
+    position: sticky;
+    position: fixed;
+} */
+
+.sticky-navbar {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    display: inline-block;
+    vertical-align: middle;
+   
+}
+
+.search-bar {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: flex-start; */
+    width: 200px;
+}
+
+/* .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} */
+
+/* .welcome {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+} */
+
+.list-dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: #FFFFFF;
+    color: black; */
+    /* font-size: 50px;   */
+}
+
+.btn-group {
+    padding: 15px 32px;
+}
+
+
+

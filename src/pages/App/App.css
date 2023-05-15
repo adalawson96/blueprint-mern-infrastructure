@@ -37,6 +37,8 @@
   }
 } */
 
+
+/* FOOTER CSS */
 *{
   margin: 0;
   padding:0;
@@ -88,6 +90,7 @@ form input{
   background-color: black;
   border: solid white; 
   font-size: 13px;
+  color: white;
 }
 
 form button {
@@ -102,6 +105,7 @@ form button {
 .social-icons {
   margin-top: 30px;
 }
+
 .social-icons i {
   font-size: 22px;
   margin: 10px;
