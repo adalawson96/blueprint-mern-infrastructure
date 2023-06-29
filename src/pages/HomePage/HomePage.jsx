@@ -9,6 +9,7 @@ export default function HomePage(){
                 <img src="https://i.imgur.com/un1goop.png" alt="coffee" />
                 <br/>
                 <h3> Ethically Sourced, Responsibly Grown, Roasted <br/> with Care</h3>
+                <h1>testing</h1>
                 <br/>
             </div>
 
